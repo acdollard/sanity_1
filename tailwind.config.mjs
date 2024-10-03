@@ -4,6 +4,8 @@ export default {
   theme: {
     fontFamily: {
       special: ["Lily Script One"],
+      jakarta: ["Plus Jakarta Sans Variable"],
+      jetbrains: ['"JetBrains Mono Variable"'],
     },
     extend: {},
   },

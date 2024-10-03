@@ -1,26 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Header from "../components/Header.vue";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
+  <Header client:visible />
+  <main class="pt-2">
     <h1><span class="text-gradient">about me</span></h1>
-    <div
-      class="bg-gradient-to-b from-orange-800 via-red-700 to-orange-600 text-zinc-100 rounded-md p-8 flex-col font-special my-2"
+    <!-- <div
+      class="bg-gradient-to-b from-orange-800 via-red-700 to-orange-600 text-zinc-100 rounded-md p-8 flex-col font-jakarta font-thin my-2"
     >
-      Hillsboro Web Designs
+      Sphinx of black quartz, judge my vow.
     </div>
-    <a class="bg-sky-700 text-zinc-100 p-2 my-5 rounded-md" href="/">Home</a>
+    <a class="bg-sky-700 text-zinc-100 p-2 my-5 rounded-md" href="/">Home</a> -->
   </main>
 </Layout>
 
 <style>
   main {
     margin: auto;
-    padding: 2rem;
-    width: 1000px;
-    max-width: calc(100% - 2rem);
+
     color: #fff;
     font-size: 20px;
     line-height: 1.6;
