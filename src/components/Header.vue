@@ -10,15 +10,15 @@ const toggleOpen = () => {
 </script>
 
 <template>
-  <header class="bg-slate-100 pt-4 pb-2 sm:flex sm:justify-between sm:items-center">
+  <header class="bg-slate-100 mb-4 pt-4 pb-2 sm:flex sm:justify-between sm:items-center">
 
     <div class="flex items-center justify-between px-4">
       <div class="p-2">
         <a href="/" class="text-lg transition-all ease-in">Hillsboro Web Designs</a>
       </div>
     
-      <div class="flex items-center sm:hidden p-2">
-        <button @click="toggleOpen" class=" transition-all hover:bg-slate-600 hover:text-slate-100 rounded">
+      <div class="flex items-center sm:hidden">
+        <button @click="toggleOpen" class="p-2 transition-all hover:bg-slate-600 hover:text-slate-100 rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-6 h-6"
@@ -37,8 +37,8 @@ const toggleOpen = () => {
 
     <div :class="isOpen ? 'block' : 'hidden'" class="px-2 sm:flex ">
       <a href="/about" class="px-4 py-2 block transition ease-in delay-75 hover:bg-slate-600 hover:text-slate-100 rounded ">About</a>
-      <a href="#" class="px-4 py-2 block transition ease-in hover:bg-slate-600 hover:text-slate-100 rounded  ">Contact</a>
-      <a href="#" class="px-4 py-2 block transition ease-in hover:bg-slate-600 hover:text-slate-100 rounded ">Portfolio</a>
+      <a href="/contact" class="px-4 py-2 block transition ease-in delay-75 hover:bg-slate-600 hover:text-slate-100 rounded  ">Contact</a>
+      <a href="#" class="px-4 py-2 block transition ease-in delay-75 hover:bg-slate-600 hover:text-slate-100 rounded ">Portfolio</a>
     </div>
 
   </header>
