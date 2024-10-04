@@ -1,36 +1,89 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header client:visible />
-
-  <form
-    method="POST"
-    id="form"
-    class="flex flex-col bg-transparent gap-1 max-w-md m-auto px-3 rounded"
-  >
-    <input
-      type="hidden"
-      name="access_key"
-      value={import.meta.env.FORM_ACCESS_KEY}
-    />
-    <label for="name" class="text-slate-100 pl-2">Name</label>
-    <input type="text" name="name" required class="m-2 rounded p-1" />
-
-    <label for="email" class="text-slate-100 pl-2">Email</label>
-    <input type="email" name="email" required class="m-2 rounded p-1" />
-
-    <label for="message" class="text-slate-100 pl-2">Message</label>
-    <textarea name="message" required class="m-2 rounded p-1"></textarea>
-    <button
-      type="submit"
-      class="text-slate-100 my-2 mx-auto w-1/3 rounded border border-slate-100 hover:scale-110"
-      >Holler at me!</button
+  <div class="hero-text h-40 flex items-center justify-center">
+    <h1 class="text-seasalt">
+      <span>Contact</span>
+      <span class="text-gradient">me</span>
+    </h1>
+  </div>
+  <div class="section white relative">
+    <div class="blue-wave-divider">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div
+      class="text-area text-xl p-8 flex w-auto flex-col justify-start items-center font-jakarta bg-seasalt"
     >
-    <div id="result" class="text-slate-100 pl-2"></div>
-  </form>
+      <p class="m-2">email: alexdollard141@gmail.com</p>
+      <p class="m-2 pb-2">phone: 770-542-9231</p>
+    </div>
+    <form
+      method="POST"
+      id="form"
+      class="flex flex-col bg-transparent gap-1 max-w-md mx-auto px-8 rounded-md"
+    >
+      <input
+        type="hidden"
+        name="access_key"
+        value={import.meta.env.FORM_ACCESS_KEY}
+      />
+      <label for="name" class="text-slate-100 pl-2">Name</label>
+      <input
+        type="text"
+        name="name"
+        required
+        class="mb-2 mx-2 rounded-sm p-1"
+      />
+
+      <label for="email" class="text-slate-100 pl-2">Email</label>
+      <input
+        type="email"
+        name="email"
+        required
+        class="mb-2 mx-2 rounded-sm p-1"
+      />
+
+      <label for="message" class="text-slate-100 pl-2">Message</label>
+      <textarea name="message" required class="mb-2 mx-2 rounded-sm p-4"
+      ></textarea>
+      <button
+        type="submit"
+        class="text-slate-100 p-2 my-2 mx-auto w-1/3 rounded-md border border-slate-100 hover:scale-110"
+        >Holler at me!</button
+      >
+      <div id="result" class="text-slate-100 pl-2"></div>
+    </form>
+  </div>
+  <div class="bg-seasalt"></div>
+  <div class="section dark-blue relative">
+    <div class="white-wave-divider">
+      <svg
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+  </div>
+  <Footer class="footer" />
 </Layout>
 
 <script is:inline>
@@ -75,3 +128,102 @@ import Header from "../components/Header.vue";
       });
   });
 </script>
+
+<style scoped>
+  main {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+
+  .blue-wave-divider .shape-fill {
+    fill: #13151a;
+  }
+
+  .white-wave-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .white-wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(267% + 1.3px);
+    height: 194px;
+    transform: rotateY(180deg);
+  }
+
+  .white-wave-divider .shape-fill {
+    fill: #f9f9f9;
+  }
+
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(149% + 1.3px);
+    height: 194px;
+  }
+
+  .section {
+    width: 100%;
+    min-height: 350px;
+
+    @media (max-width: 500px) {
+      min-height: 400px;
+    }
+  }
+
+  .white {
+    background: #f9f9f9;
+  }
+
+  .dark-blue {
+    background: #13151a;
+  }
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+  }
+</style>

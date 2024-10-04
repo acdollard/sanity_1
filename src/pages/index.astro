@@ -1,63 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header client:visible />
   <main class="w-100 pt-2 relative">
     <div class="hero-text h-96 flex items-center justify-center">
-      <h1><span>Welcome</span> <span class="text-gradient">home</span></h1>
+      <h1 class="text-seasalt font-jakarta">
+        <span>Welcome</span>
+        <span class="text-gradient">home.</span>
+      </h1>
     </div>
-    <!-- <div class="block w-96 m-8 rounded-md bg-slate-500"></div> -->
-    <div class="wave">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fill"></path>
-      </svg>
+    <div
+      class="spacer wave-white-to-blue flex w-100 flex-col justify-center items-center h-80"
+    >
     </div>
-    <div class="section">
-      <div class="custom-shape-divider-top-1728005135">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            class="shape-fill"></path>
-        </svg>
-      </div>
+    <div
+      class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt"
+    >
+      <p class="mb-2">Building lean, beautiful websites.</p>
+      <p class="">Just for you.</p>
     </div>
+    <div class="spacer wave-2 h-96"></div>
+    <!-- <div
+      class="spacer wave-white-to-blue flex w-100 flex-col justify-center items-center h-80"
+    >
+    </div> -->
   </main>
+  <Footer />
 </Layout>
 <style>
   main {
-    color: #fff;
     font-size: 20px;
     line-height: 1.6;
   }
   h1 {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     text-align: center;
     margin-bottom: 1em;
-    /* 
-    transform: scale(0.94);
-    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  }
-  @keyframes scale {
-    100% {
-      transform: scale(1);
-    } */
   }
 
   .text-gradient {
@@ -68,40 +53,27 @@ import Header from "../components/Header.vue";
     background-position: 0%;
   }
 
-  .block {
-    height: 400px;
-    width: auto;
-  }
-
-  .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .custom-shape-divider-top-1728005135 .shape-fill {
-    fill: #13151a;
-  }
-
-  .wave svg {
-    position: relative;
-    display: block;
-    width: calc(149% + 1.3px);
-    height: 194px;
-  }
-
-  .wave .shape-fill {
-    fill: #ffffff;
-  }
-
   .section {
-    background-color: #fff;
     width: 100%;
     height: 500px;
+    background-image: url("../assets/layered-waves-haikei.svg");
+
+    @media (max-width: 500px) {
+      height: 400px;
+    }
+  }
+
+  .wave-white-to-blue {
+    /* background: #f9f9f9; */
+    background-image: url("../assets/layered-waves-haikei-4.svg");
+  }
+  .wave-2 {
+    /* background: #f9f9f9; */
+    background-image: url("../assets/layered-waves-5.svg");
+  }
+
+  .dark-blue {
+    background: #13151a;
   }
 
   span {
@@ -116,6 +88,14 @@ import Header from "../components/Header.vue";
 
   span:nth-child(2) {
     animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  .spacer {
+    aspect-ratio: 900/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   @keyframes fade-in {

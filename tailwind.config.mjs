@@ -7,7 +7,15 @@ export default {
       jakarta: ["Plus Jakarta Sans Variable"],
       jetbrains: ['"JetBrains Mono Variable"'],
     },
-    extend: {},
+    colors: {
+      seasalt: "#F9F9F9",
+      offWhite: "#cbd5e1",
+    },
+    extend: {
+      backgroundImage: {
+        "wavy-pattern-w-to-b": "url('/src/assets/layered-waves-haikei.svg')",
+      },
+    },
   },
   plugins: [],
 };

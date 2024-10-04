@@ -10,15 +10,15 @@ const toggleOpen = () => {
 </script>
 
 <template>
-  <header class="bg-slate-100 mb-4 pt-4 pb-2 sm:flex sm:justify-between sm:items-center sticky">
+  <header class="bg-seasalt mb-4 pt-4 pb-2 sm:flex sm:justify-between sm:items-center font-jakarta">
 
     <div class="flex items-center justify-between px-4">
       <div class="p-2">
-        <h2 class="text-gradient text-3xl"><a href="/">Hillsboro Web Designs</a></h2>
+        <h2 class="text-gradient text-2xl"><a href="/">Hillsboro Web Designs</a></h2>
       </div>
     
       <div class="flex items-center sm:hidden">
-        <button @click="toggleOpen" class="p-2 transition-all hover:font-bold rounded">
+        <button v-if="!isOpen" @click="toggleOpen" class="p-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="w-6 h-6"
@@ -32,13 +32,25 @@ const toggleOpen = () => {
               d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
+        <button v-if="isOpen" @click="toggleOpen" class="p-2">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 50 50"
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+          <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+          </svg>  
+        </button> 
       </div>
     </div>
 
-    <div :class="isOpen ? 'flex' : 'hidden'" class="px-2 sm:flex items-center justify-center">
-      <a href="/about" class="px-4 py-2 block transition ease-in delay-75 hover:font-bold rounded ">About</a>
-      <a href="/contact" class="px-4 py-2 block transition ease-in delay-75 hover:font-bold rounded">Contact</a>
-      <a href="#" class="px-4 py-2 block transition ease-in delay-75 hover:font-bold rounded">Portfolio</a>
+    <div :class="isOpen ? 'flex' : 'hidden'" class="px-2 sm:flex items-center justify-around">
+      <a href="/" class="px-4 py-2 block text-slate-700  hover:font-semibold rounded">Home</a>
+      <a href="/about" class="px-4 py-2 block text-slate-700  hover:font-semibold rounded">About</a>
+      <a href="/contact" class="px-4 py-2 block text-slate-700 hover:font-semibold rounded">Contact</a>
+      <!-- <a href="#" class="px-4 py-2 block text-slate-700 hover:font-semibold rounded">Portfolio</a> -->
     </div>
 
   </header>

@@ -1,50 +1,156 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header client:visible />
-  <main class="pt-2">
-    <h1><span class="text-gradient">about me</span></h1>
-    <!-- <div
-      class="bg-gradient-to-b from-orange-800 via-red-700 to-orange-600 text-zinc-100 rounded-md p-8 flex-col font-jakarta font-thin my-2"
-    >
-      Sphinx of black quartz, judge my vow.
+  <main class="w-100 pt-2 relative">
+    <div class="hero-text h-40 flex items-center justify-center">
+      <h1 class="text-seasalt">
+        <span>About</span>
+        <span class="text-gradient">me</span>
+      </h1>
     </div>
-    <a class="bg-sky-700 text-zinc-100 p-2 my-5 rounded-md" href="/">Home</a> -->
+
+    <div class="section white relative">
+      <div class="blue-wave-divider">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+      <div
+        class="text-area text-2xl font-jakarta flex flex-col justify-center items-center h-80"
+      >
+        <p class="mb-2">Building lean, beautiful websites.</p>
+        <p class="">Just for you.</p>
+      </div>
+    </div>
+    <div class="section-bottom dark-blue relative">
+      <div class="white-wave-divider">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+    </div>
   </main>
+  <Footer class="footer" />
 </Layout>
 
 <style>
   main {
-    margin: auto;
-
-    color: #fff;
     font-size: 20px;
     line-height: 1.6;
   }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
   h1 {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     text-align: center;
     margin-bottom: 1em;
   }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
+  }
+
+  .blue-wave-divider .shape-fill {
+    fill: #13151a;
+  }
+
+  .white-wave-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .white-wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(267% + 1.3px);
+    height: 194px;
+    transform: rotateY(180deg);
+  }
+
+  .white-wave-divider .shape-fill {
+    fill: #ffffff;
+  }
+
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(149% + 1.3px);
+    height: 194px;
+  }
+
+  .section {
+    width: 100%;
+    min-height: 400px;
+
+    @media (max-width: 500px) {
+      height: 400px;
+    }
+  }
+
+  .section-bottom {
+    height: 350px;
+  }
+
+  .white {
+    background: #fff;
+  }
+
+  .dark-blue {
+    background: #13151a;
+  }
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
   }
 </style>
