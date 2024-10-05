@@ -1,0 +1,183 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import { Image } from "astro:assets";
+import alex from "../assets/alex.jpg";
+---
+
+<Layout title="Welcome to Astro.">
+  <Header client:visible />
+
+  <div class="min-h-screen">
+    <div class="hero-text flex items-center justify-center bg-darkestblue">
+      <h1 class="text-seasalt pt-8">
+        <span>About</span>
+        <span class="text-gradient">me</span>
+      </h1>
+    </div>
+
+    <div class="section white">
+      <div class="blue-wave-divider">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+
+      <div class="flex justify-center mb-16 mt-8">
+        <div
+          class="text-area text-wrap text-xl font-jakarta gap-5 w-4/5 md:w-1/2"
+        >
+          <div class="">
+            <Image
+              src={alex}
+              alt="Alex Dollard, founder"
+              height="400"
+              class="rounded-full float-left pr-6"
+            />
+          </div>
+          <p class="font-jakarta">
+            Now listen, I'm not here to throw stones. There are many automatic
+            site builders out there that will let you spin up a semi-functional
+            website quickly and do a fine job of it. Take WordPress, for
+            example.
+            <br />
+            <br />
+            WordPress has been the backbone of the internet for as long as I can
+            remember, and as I write this, it accounts for over 40% of all websites,
+            so it's safe to say that it isn't going anywhere. But technology doesn't
+            age the same way as great novels, or art. Art ages like wine. Technology
+            ages like cheese.
+
+            <br />
+            <br />
+            What I do is build websites from scratch, using the most up-to-date tooling,
+            and best practices learned in my 4+ years of professional experience
+            as a software developer. In my experience as a freelancer, I've learned
+            that there's a heavy price to be paid for the convenience that comes
+            with services like WordPress, Squarespace, and Wix. These technologies
+            are slow, bloated from old code, and vulnerable to attack from bad actors.
+            They're written on top of legacy codebases that have grown so complex
+            hardly anyone understands them anymore. And you can get something that
+            looks <em>okay</em>, but it's never exactly what you want.
+
+            <br />
+            <br />
+            By building my websites from scratch and using modern CMS alternatives
+            like Sanity.io, I get rid of the need for WordPress its bloated competitors.
+            My websites are stripped down from the groud up, which results in minimal
+            load times and easier updates. I'm here to trim off the fat and give
+            you exactly the website you want, one that's lean, performant, and beautiful.
+            One that's easy to maintain and will help your small business get more
+            visitors, more traffic, and more revenue.
+            <br />
+            <br />
+            All I want to do is build great websites. Let me build one for you.
+          </p>
+          <p class="text-sm italic mt-4">- Alex Dollard (pictured)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
+
+<style>
+  .container {
+    font-size: 20px;
+    line-height: 1.6;
+    flex-grow: auto;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+
+  .text-area {
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .blue-wave-divider .shape-fill {
+    fill: #13151a;
+  }
+
+  .white-wave-divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .white-wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(267% + 1.3px);
+    height: 194px;
+    transform: rotateY(180deg);
+  }
+
+  .wave svg {
+    position: relative;
+    display: block;
+    width: calc(149% + 1.3px);
+    height: 194px;
+  }
+
+  .section {
+    width: 100%;
+
+    @media (max-width: 500px) {
+      min-height: 400px;
+    }
+  }
+
+  .dark-blue {
+    background: #13151a;
+  }
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+</style>
