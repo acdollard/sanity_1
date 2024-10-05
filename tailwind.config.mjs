@@ -12,11 +12,6 @@ export default {
       offWhite: "#cbd5e1",
       darkestblue: "#13151a",
     },
-    extend: {
-      backgroundImage: {
-        "wavy-pattern-w-to-b": "url('/src/assets/layered-waves-haikei.svg')",
-      },
-    },
   },
   plugins: [],
 };
