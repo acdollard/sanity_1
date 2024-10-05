@@ -10,6 +10,7 @@ export default {
     colors: {
       seasalt: "#F9F9F9",
       offWhite: "#cbd5e1",
+      darkestblue: "#13151a",
     },
     extend: {
       backgroundImage: {

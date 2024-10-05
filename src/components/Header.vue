@@ -10,7 +10,7 @@ const toggleOpen = () => {
 </script>
 
 <template>
-  <header class="bg-seasalt mb-4 pt-4 pb-2 sm:flex sm:justify-between sm:items-center font-jakarta">
+  <header class="bg-seasalt pt-4 pb-2 sm:flex sm:justify-between sm:items-center font-jakarta">
 
     <div class="flex items-center justify-between px-4">
       <div class="p-2">

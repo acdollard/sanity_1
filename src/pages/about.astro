@@ -2,19 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import { Image } from "astro:assets";
+import alex from "../assets/alex.jpg";
 ---
 
 <Layout title="Welcome to Astro.">
   <Header client:visible />
-  <main class="w-100 pt-2 relative">
-    <div class="hero-text h-40 flex items-center justify-center">
-      <h1 class="text-seasalt">
+
+  <div class="min-h-screen">
+    <div class="hero-text flex items-center justify-center bg-darkestblue">
+      <h1 class="text-seasalt pt-8">
         <span>About</span>
         <span class="text-gradient">me</span>
       </h1>
     </div>
 
-    <div class="section white relative">
+    <div class="section white">
       <div class="blue-wave-divider">
         <svg
           data-name="Layer 1"
@@ -27,35 +30,70 @@ import Footer from "../components/Footer.vue";
             class="shape-fill"></path>
         </svg>
       </div>
-      <div
-        class="text-area text-2xl font-jakarta flex flex-col justify-center items-center h-80"
-      >
-        <p class="mb-2">Building lean, beautiful websites.</p>
-        <p class=""></p>
-      </div>
-    </div>
-    <div class="section-bottom dark-blue relative">
-      <div class="white-wave-divider">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
+
+      <div class="flex justify-center mb-16 mt-8">
+        <div
+          class="text-area text-wrap text-xl font-jakarta gap-5 w-4/5 md:w-1/2"
         >
-          <path
-            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-            class="shape-fill"></path>
-        </svg>
+          <div class="">
+            <Image
+              src={alex}
+              alt="Alex Dollard, founder"
+              height="400"
+              class="rounded-full float-left pr-6"
+            />
+          </div>
+          <p class="font-jakarta">
+            Now listen, I'm not here to throw stones. There are many automatic
+            site builders out there that will let you spin up a semi-functional
+            website quickly and do a fine job of it. Take WordPress, for
+            example.
+            <br />
+            <br />
+            WordPress has been the backbone of the internet for as long as I can
+            remember, and as I write this, it accounts for over 40% of all websites,
+            so it's safe to say that it isn't going anywhere. But technology doesn't
+            age the same way as great novels, or art. Art ages like wine. Technology
+            ages like cheese.
+
+            <br />
+            <br />
+            What I do is build websites from scratch, using the most up-to-date tooling,
+            and best practices learned in my 4+ years of professional experience
+            as a software developer. In my experience as a freelancer, I've learned
+            that there's a heavy price to be paid for the convenience that comes
+            with services like WordPress, Squarespace, and Wix. These technologies
+            are slow, bloated from old code, and vulnerable to attack from bad actors.
+            They're written on top of legacy codebases that have grown so complex
+            hardly anyone understands them anymore. And you can get something that
+            looks <em>okay</em>, but it's never exactly what you want.
+
+            <br />
+            <br />
+            By building my websites from scratch and using modern CMS alternatives
+            like Sanity.io, I get rid of the need for WordPress its bloated competitors.
+            My websites are stripped down from the groud up, which results in minimal
+            load times and easier updates. I'm here to trim off the fat and give
+            you exactly the website you want, one that's lean, performant, and beautiful.
+            One that's easy to maintain and will help your small business get more
+            visitors, more traffic, and more revenue.
+            <br />
+            <br />
+            All I want to do is build great websites. Let me build one for you.
+          </p>
+          <p class="text-sm italic mt-4">- Alex Dollard (pictured)</p>
+        </div>
       </div>
     </div>
-  </main>
-  <Footer class="footer" />
+  </div>
+  <Footer />
 </Layout>
 
 <style>
-  main {
+  .container {
     font-size: 20px;
     line-height: 1.6;
+    flex-grow: auto;
   }
   h1 {
     font-size: 4rem;
@@ -71,6 +109,14 @@ import Footer from "../components/Footer.vue";
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
+  }
+
+  .text-area {
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .blue-wave-divider .shape-fill {
@@ -95,10 +141,6 @@ import Footer from "../components/Footer.vue";
     transform: rotateY(180deg);
   }
 
-  .white-wave-divider .shape-fill {
-    fill: #ffffff;
-  }
-
   .wave svg {
     position: relative;
     display: block;
@@ -108,19 +150,10 @@ import Footer from "../components/Footer.vue";
 
   .section {
     width: 100%;
-    min-height: 400px;
 
     @media (max-width: 500px) {
-      height: 400px;
+      min-height: 400px;
     }
-  }
-
-  .section-bottom {
-    height: 350px;
-  }
-
-  .white {
-    background: #fff;
   }
 
   .dark-blue {
@@ -146,11 +179,5 @@ import Footer from "../components/Footer.vue";
       opacity: 1;
       filter: blur(0);
     }
-  }
-
-  .footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
   }
 </style>
