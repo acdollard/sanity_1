@@ -6,30 +6,23 @@ import Footer from "../components/Footer.vue";
 
 <Layout title="Welcome to Astro..">
   <Header client:visible />
-  <div class="hero-text pt-8 flex items-center justify-center bg-darkestblue">
-    <h1 class="text-seasalt">
-      <span>Contact</span>
-      <span class="text-gradient">me</span>
+  <div class="hero-text h-40 flex items-center justify-center bg-darkestblue">
+    <h1 class="text-seasalt font-jakarta">
+      <span class="text-gradient pt-6">Get in touch!</span>
     </h1>
   </div>
-  <div class="section white relative">
-    <div class="blue-wave-divider">
-      <svg
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-          class="shape-fill"></path>
-      </svg>
-    </div>
+  <div
+    class="spacer wave-white-to-blue flex w-100 flex-col justify-center items-center h-80"
+  >
+  </div>
+  <div class="body">
     <div
-      class="text-area text-xl p-8 flex w-auto flex-col justify-start items-center font-jakarta bg-seasalt"
+      class="text-area text-xl flex m-auto text-left w-auto max-w-md flex-col justify-center items-center font-jakarta bg-seasalt"
     >
-      <p class="m-2">email: alexdollard141@gmail.com</p>
-      <p class="m-2 pb-2">phone: 770-542-9231</p>
+      <p class="m-2 text-left">
+        <strong>email:</strong> alexdollard141@gmail.com
+      </p>
+      <p class="m-2 pb-2 text-left"><strong>phone:</strong> 770-542-9231</p>
     </div>
     <form
       method="POST"
@@ -127,6 +120,10 @@ import Footer from "../components/Footer.vue";
     margin-bottom: 1em;
   }
 
+  .body {
+    min-height: 45vh;
+  }
+
   .text-gradient {
     background-image: var(--accent-gradient);
     -webkit-background-clip: text;
@@ -155,6 +152,19 @@ import Footer from "../components/Footer.vue";
     width: calc(267% + 1.3px);
     height: 194px;
     transform: rotateY(180deg);
+  }
+
+  .wave-white-to-blue {
+    /* background: #f9f9f9; */
+    background-image: url("../assets/layered-waves-haikei-4.svg");
+  }
+
+  .spacer {
+    aspect-ratio: 900/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 
   .white-wave-divider .shape-fill {
@@ -210,5 +220,9 @@ import Footer from "../components/Footer.vue";
     position: fixed;
     bottom: 0px;
     left: 0px;
+
+    @media (max-width: 500px) {
+      position: relative;
+    }
   }
 </style>
