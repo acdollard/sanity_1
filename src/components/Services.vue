@@ -1,0 +1,198 @@
+<script>
+
+</script>
+
+<template>
+  <section id="services-1644">
+    <div class="cs-container font-jakarta">
+        <!-- <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">What We Provide To Our Customer</h2>
+            <p class="cs-text">
+                Designed to maintain your current colour, blend out a growing root or balance your blonde while providing full and demi-permanent coverage.
+            </p>
+        </div> -->
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <!-- <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/checkmark-circle-gold.svg" alt="icon" width="48"
+                            height="48" aria-hidden="true"> -->
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">100% Tailored to You.</h2>
+                    <p class="cs-item-text">
+                        By coding my websites by hand, I avoid the same tired, old themes you're used to seeing everywhere. You get a website 
+                        that nobody else in the world has. 
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <!-- <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dashboard-gold.svg" alt="icon" width="48"
+                            height="48" aria-hidden="true"> -->
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">Personal Support 24/7</h2>
+                    <p class="cs-item-text">
+                        I'm here for you and your site anytime. No more chatbots or getting passed around call centers. Instead of 
+                        feeling overwhelmed trying to figure everything out yourself, just give me a call. I got you. 
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <!-- <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Lifebuoy-gold.svg" alt="icon" width="48"
+                            height="48" aria-hidden="true"> -->
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">Speed and Performance</h2>
+                    <p class="cs-item-text">
+                        You might not care so much about what goes on under the hood, but I do. I geek out on this stuff. Having a faster, 
+                        more performant website will help retain visitors, increase traffic and optimize SEO. All good for business! 
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-image-group">
+                    <!-- <img class="cs-icon" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Like-gold.svg" alt="icon" width="48"
+                            height="48" aria-hidden="true"> -->
+                </div>
+                <div class="cs-flex">
+                    <h2 class="cs-h2">Stable and Secure.</h2>
+                    <p class="cs-item-text">
+                        By using lean, minial code and avoiding the big site builders, which cybercriminals know how to attack, we minimze
+                         the target area and keep your website healthy for the long-term. 
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>                            
+</section>
+</template>
+
+<style scoped>
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1644 {
+    padding: var(--sectionPadding);
+  }
+  #services-1644 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(2.5rem, 4vw, 4rem);
+  }
+  #services-1644 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-1644 .cs-title {
+    max-width: none;
+  }
+  #services-1644 .cs-text {
+    max-width: 60ch;
+  }
+  #services-1644 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #services-1644 .cs-item {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    /* resets at tablet */
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 24px - 40px */
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    position: relative;
+    z-index: 1;
+  }
+  #services-1644 .cs-item:last-of-type:before {
+    display: none;
+  }
+  #services-1644 .cs-item:before {
+    /* gradient line divider */
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: .6;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+  }
+  #services-1644 .cs-item:first-of-type {
+    padding-top: 0;
+  }
+  #services-1644 .cs-item:last-of-type {
+    padding-bottom: 0;
+    border: none;
+  }
+  #services-1644 .cs-image-group {
+    position: relative;
+  }
+  #services-1644 .cs-icon {
+    width: 3rem;
+    height: auto;
+  }
+  #services-1644 .cs-h2 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    text-align: inherit;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+  }
+  #services-1644 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    text-align: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #services-1644 .cs-container {
+    max-width: 120rem;
+  }
+  #services-1644 .cs-card-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+  #services-1644 .cs-item {
+    /* 24px - 60px */
+    padding: 0rem clamp(1.5rem, 3vw, 3.75rem);
+  }
+  #services-1644 .cs-item:before {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+    left: auto;
+    right: 0;
+  }
+}
+</style>

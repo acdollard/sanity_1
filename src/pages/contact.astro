@@ -8,26 +8,23 @@ import Footer from "../components/Footer.vue";
   <Header client:visible />
   <div class="hero-text h-40 flex items-center justify-center bg-darkestblue">
     <h1 class="text-seasalt font-jakarta">
-      <span class="text-gradient pt-6">Get in touch!</span>
+      <span class="text-gradient pt-6">Get in touch</span>
     </h1>
   </div>
-  <div
-    class="spacer wave-white-to-blue flex w-100 flex-col justify-center items-center h-80"
-  >
-  </div>
+  <div class="spacer wave-white-to-blue"></div>
   <div class="body">
     <div
-      class="text-area text-xl flex m-auto text-left w-auto max-w-md flex-col justify-center items-center font-jakarta bg-seasalt"
+      class="text-area text-xl px-8 flex m-auto text-left w-auto max-w-md flex-col justify-center items-start font-jakarta bg-seasalt"
     >
-      <p class="m-2 text-left">
+      <p class="mb-2">
         <strong>email:</strong> alexdollard141@gmail.com
       </p>
-      <p class="m-2 pb-2 text-left"><strong>phone:</strong> 770-542-9231</p>
+      <p class="mb-2"><strong>phone:</strong> 770-542-9231</p>
     </div>
     <form
       method="POST"
       id="form"
-      class="flex flex-col bg-transparent gap-1 max-w-md mx-auto px-8 rounded-md"
+      class="flex flex-col bg-transparent gap-1 max-w-md mx-auto px-8 pt-4 rounded-md"
     >
       <input
         type="hidden"
@@ -61,6 +58,7 @@ import Footer from "../components/Footer.vue";
       <div id="result" class="text-slate-100 pl-2"></div>
     </form>
   </div>
+  <div class="spacer wave-2"></div>
   <Footer class="footer" />
 </Layout>
 
@@ -124,7 +122,6 @@ import Footer from "../components/Footer.vue";
   }
 
   .body {
-    min-height: 45vh;
   }
 
   .text-gradient {
@@ -133,28 +130,6 @@ import Footer from "../components/Footer.vue";
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-  }
-
-  .blue-wave-divider .shape-fill {
-    fill: #13151a;
-  }
-
-  .white-wave-divider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .white-wave-divider svg {
-    position: relative;
-    display: block;
-    width: calc(267% + 1.3px);
-    height: 194px;
-    transform: rotateY(180deg);
   }
 
   .wave-white-to-blue {
@@ -170,16 +145,12 @@ import Footer from "../components/Footer.vue";
     background-size: cover;
   }
 
-  .white-wave-divider .shape-fill {
-    fill: #f9f9f9;
-  }
-
-  .wave svg {
+  /* .wave svg {
     position: relative;
     display: block;
     width: calc(149% + 1.3px);
     height: 194px;
-  }
+  } */
 
   .section {
     width: 100%;
@@ -204,6 +175,11 @@ import Footer from "../components/Footer.vue";
     filter: blur(4px);
   }
 
+  .wave-2 {
+    /* background: #f9f9f9; */
+    background-image: url("../assets/layered-waves-5.svg");
+  }
+
   span:nth-child(1) {
     animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
@@ -218,7 +194,7 @@ import Footer from "../components/Footer.vue";
       filter: blur(0);
     }
   }
-
+  /* 
   .footer {
     position: fixed;
     bottom: 0px;
@@ -227,5 +203,5 @@ import Footer from "../components/Footer.vue";
     @media (max-width: 500px) {
       position: relative;
     }
-  }
+  } */
 </style>
