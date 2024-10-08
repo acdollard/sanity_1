@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import Services from "../components/Services.vue";
+import SingleQuote from "../components/SingleQuote.vue";
 ---
 
 <Layout title="Hillsboro Web Designs">
@@ -44,8 +45,20 @@ import Services from "../components/Services.vue";
     <div
       class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-darkestblue"
     >
+      <SingleQuote />
     </div>
     <div class="spacer wave-white-to-blue"></div>
+    <div
+      class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt"
+    >
+      <p class="max-w-prose text-center m-6">
+        You have <strong>more important</strong> things to do than wrestling with
+        a major website builder for a site that's <strong
+          ><em>just okay.</em></strong
+        >
+      </p>
+    </div>
+    <div class="spacer wave-2"></div>
   </main>
   <Footer />
 </Layout>

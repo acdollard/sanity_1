@@ -43,8 +43,8 @@
                 <div class="cs-flex">
                     <h2 class="cs-h2">Speed and Performance</h2>
                     <p class="cs-item-text">
-                        You might not care so much about what goes on under the hood, but I do. I geek out on this stuff. Having a faster, 
-                        more performant website will help retain visitors, increase traffic and optimize SEO. All good for business! 
+                        You might not care so much about what goes on under the hood, but I do. I geek out on this stuff! Having a faster, 
+                        more performant website will help retain visitors, increase traffic and optimize SEO. All of which are good for your business. 
                     </p>
                 </div>
             </li>
