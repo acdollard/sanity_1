@@ -8,28 +8,42 @@ import Services from "../components/Services.vue";
 <Layout title="Hillsboro Web Designs">
   <Header client:visible />
   <main class="w-100 relative">
-    <div class="hero-text h-96 flex items-center justify-center bg-darkestblue">
+    <div
+      class="hero-text flex flex-col items-center justify-center bg-darkestblue"
+    >
       <h1 class="text-seasalt font-jakarta">
         Building
         <span class="text-gradient fade">lean, </span>
-        <span class="text-gradient">beautiful </span><br />websites. Just for
-        you.
+        <span class="text-gradient fade">beautiful </span> websites. <br />Just
+        for you.
       </h1>
+      <div
+        class="button-group flex flex-row justify-center gap-6 bg-darkestblue"
+      >
+        <a href="/about">
+          <span
+            class="text-seasalt font-jakarta py-2 px-4 border border-gray-400 rounded-sm hover:bg-bluegreen"
+            >Learn More</span
+          >
+        </a>
+        <a href="/contact">
+          <span
+            class="text-seasalt py-2 px-4 border border-gray-400 rounded-sm hover:bg-oldrose"
+            >Get in Touch</span
+          >
+        </a>
+      </div>
     </div>
     <div class="spacer wave-white-to-blue"></div>
     <div
       class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt"
     >
-      <!-- <p class="mb-2">Building lean, beautiful websites.</p>
-      <p class="">Just for you.</p> -->
       <Services />
     </div>
     <div class="spacer wave-2"></div>
     <div
       class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-darkestblue"
     >
-      <!-- <p class="mb-2">Building lean, beautiful websites.</p>
-    <p class="">Just for you.</p> -->
     </div>
     <div class="spacer wave-white-to-blue"></div>
   </main>
@@ -47,6 +61,19 @@ import Services from "../components/Services.vue";
     line-height: 1;
     text-align: center;
     margin-bottom: 1em;
+
+    @media (max-width: 500px) {
+      margin-bottom: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+    }
+  }
+  .hero-text {
+    min-height: 40vh;
+
+    @media (max-width: 500px) {
+      min-height: 75vh;
+    }
   }
 
   .text-gradient {
@@ -58,11 +85,9 @@ import Services from "../components/Services.vue";
   }
 
   .wave-white-to-blue {
-    /* background: #f9f9f9; */
     background-image: url("../assets/layered-waves-haikei-4.svg");
   }
   .wave-2 {
-    /* background: #f9f9f9; */
     background-image: url("../assets/layered-waves-5.svg");
   }
 
@@ -70,7 +95,7 @@ import Services from "../components/Services.vue";
     background: #13151a;
   }
 
-  span {
+  .fade {
     display: inline-block;
     opacity: 0;
     filter: blur(4px);

@@ -5,13 +5,6 @@
 <template>
   <section id="services-1644">
     <div class="cs-container font-jakarta">
-        <!-- <div class="cs-content">
-            <span class="cs-topper">Our Services</span>
-            <h2 class="cs-title">What We Provide To Our Customer</h2>
-            <p class="cs-text">
-                Designed to maintain your current colour, blend out a growing root or balance your blonde while providing full and demi-permanent coverage.
-            </p>
-        </div> -->
         <ul class="cs-card-group">
             <li class="cs-item">
                 <div class="cs-image-group">
@@ -20,7 +13,7 @@
                             height="48" aria-hidden="true"> -->
                 </div>
                 <div class="cs-flex">
-                    <h2 class="cs-h2">100% Tailored to You.</h2>
+                    <h2 class="cs-h2">100% Tailored to You</h2>
                     <p class="cs-item-text">
                         By coding my websites by hand, I avoid the same tired, old themes you're used to seeing everywhere. You get a website 
                         that nobody else in the world has. 
@@ -62,7 +55,7 @@
                             height="48" aria-hidden="true"> -->
                 </div>
                 <div class="cs-flex">
-                    <h2 class="cs-h2">Stable and Secure.</h2>
+                    <h2 class="cs-h2">Stable and Secure</h2>
                     <p class="cs-item-text">
                         By using lean, minial code and avoiding the big site builders, which cybercriminals know how to attack, we minimze
                          the target area and keep your website healthy for the long-term. 
