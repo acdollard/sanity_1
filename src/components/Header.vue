@@ -14,7 +14,7 @@ const toggleOpen = () => {
 
     <div class="flex items-center justify-between px-4">
       <div class="p-2">
-        <h2 class="text-gradient text-2xl"><a href="/">Hillsboro Web Designs</a></h2>
+        <h2 class="text-gradient text-2xl"><a href="/">Hillsboro Digital</a></h2>
       </div>
     
       <div class="flex items-center sm:hidden">
