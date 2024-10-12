@@ -4,7 +4,7 @@ import Header from "../components/Header.vue";
 import Footer from "../components/Footer.astro";
 import Services from "../components/Services.astro";
 import SingleQuoteAstro from "../components/SingleQuote.astro";
-import manLookingUp from "../assets/man-looking-up.jpg";
+import ContactForm from "../components/ContactForm.astro";
 ---
 
 <Layout title="Hillsboro Digital">
@@ -50,17 +50,25 @@ import manLookingUp from "../assets/man-looking-up.jpg";
     </div>
     <div class="spacer wave-white-to-blue"></div>
     <div
-      class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt"
+      id="reach-out"
+      class="flex flex-col md:flex-row lg:max-w-screen-lg lg:mx-auto justify-evenly"
     >
-      <p class="max-w-5xl text-center m-6">
-        You have <strong>more important</strong> things to do than wrestle with a
-        major website builder - just to end up with a site that's <strong
-          ><em>good but not great.</em></strong
-        >
-      </p><br />
-      <p class="max-w-5xl text-center m-6">
-        Let's build you something <strong>great.</strong>
-      </p>
+      <div
+        class="text-area text-2xl flex flex-col justify-start items-center md:w-1/2 font-jakarta bg-seasalt"
+      >
+        <p class="text-center m-6">
+          You have <strong>more important</strong> things to worry about than your
+          website.
+        </p>
+        <p class="text-center m-6">
+          I'm here to build you <strong>exactly</strong> what you need.
+        </p>
+
+        <p class="text-center m-6">Send me a message to get started!</p>
+      </div>
+      <div class="md:w-1/2">
+        <ContactForm />
+      </div>
     </div>
     <div class="spacer wave-2"></div>
   </main>
