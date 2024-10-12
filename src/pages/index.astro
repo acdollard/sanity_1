@@ -1,8 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import Services from "../components/Services.vue";
+import Footer from "../components/Footer.astro";
+import Services from "../components/Services.astro";
 import SingleQuoteAstro from "../components/SingleQuote.astro";
 import manLookingUp from "../assets/man-looking-up.jpg";
 ---
@@ -11,16 +11,16 @@ import manLookingUp from "../assets/man-looking-up.jpg";
   <Header client:visible />
   <main class="w-100 relative">
     <div
-      class="hero-text flex flex-col items-center justify-center bg-darkestblue"
+      class="hero-text flex flex-col gap-6 items-center justify-center bg-darkestblue"
     >
       <h1 class="text-seasalt font-jakarta">
         Building
         <span class="text-gradient fade">lean, </span>
-        <span class="text-gradient fade">beautiful </span> websites. <br />Just
-        for you.
+        <span class="text-gradient fade">beautiful </span> websites. <br />
       </h1>
+      <h1 class="text-seasalt">Just for you.</h1>
       <div
-        class="button-group flex flex-row justify-center gap-6 bg-darkestblue"
+        class="button-group flex flex-row mt-6 justify-center gap-6 bg-darkestblue"
       >
         <a href="/about">
           <span
@@ -77,10 +77,8 @@ import manLookingUp from "../assets/man-looking-up.jpg";
     font-weight: 600;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
 
     @media (max-width: 500px) {
-      margin-bottom: 0.5em;
       padding-left: 0.5em;
       padding-right: 0.5em;
     }
