@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
 import Services from "../components/Services.vue";
-import SingleQuote from "../components/SingleQuote.vue";
+import SingleQuoteAstro from "../components/SingleQuote.astro";
+import manLookingUp from "../assets/man-looking-up.jpg";
 ---
 
 <Layout title="Hillsboro Digital">
@@ -29,7 +30,7 @@ import SingleQuote from "../components/SingleQuote.vue";
         </a>
         <a href="/contact">
           <span
-            class="text-seasalt py-2 px-4 border border-gray-400 rounded-sm hover:bg-oldrose"
+            class="text-seasalt py-2 px-4 border border-gray-400 rounded-sm hover:bg-bluegreen"
             >Get in Touch</span
           >
         </a>
@@ -45,7 +46,7 @@ import SingleQuote from "../components/SingleQuote.vue";
     <div
       class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-darkestblue"
     >
-      <SingleQuote />
+      <SingleQuoteAstro />
     </div>
     <div class="spacer wave-white-to-blue"></div>
     <div
