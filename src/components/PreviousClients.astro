@@ -1,0 +1,118 @@
+---
+
+---
+
+<div>
+  <section id="previous-clients">
+    <div class="clients-container font-jakarta">
+      <h2 class="clients-title">Previous Clients</h2>
+      <ul class="clients-list">
+        <li class="client-item">
+          <a
+            href="https://www.georgegalleryart.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="client-link"
+          >
+            www.georgegalleryart.com
+          </a>
+        </li>
+        <li class="client-item">
+          <a
+            href="https://www.peteranthonyfineart.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="client-link"
+          >
+            www.peteranthonyfineart.com
+          </a>
+        </li>
+        <li class="client-item">
+          <a
+            href="https://www.excel-resumes.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="client-link"
+          >
+            www.excel-resumes.com
+          </a>
+        </li>
+        <li class="client-item">
+          <a
+            href="https://www.buriedinthebones.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="client-link"
+          >
+            www.buriedinthebones.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<style scoped>
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #previous-clients {
+      padding: clamp(2rem, 4vw, 3rem) 1rem;
+    }
+    #previous-clients .clients-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(2rem, 4vw, 3rem);
+    }
+    #previous-clients .clients-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      text-align: center;
+      margin: 0;
+      color: var(--darkest-blue);
+    }
+    #previous-clients .clients-list {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(1rem, 2vw, 1.5rem);
+      list-style: none;
+    }
+    #previous-clients .client-item {
+      width: 100%;
+      text-align: center;
+    }
+    #previous-clients .client-link {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--darkest-blue);
+      text-decoration: none;
+      transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+      display: inline-block;
+    }
+    #previous-clients .client-link:hover {
+      color: rgb(var(--accent2-dark));
+      opacity: 0.8;
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #previous-clients .clients-list {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(1.5rem, 3vw, 2.5rem);
+    }
+    #previous-clients .client-item {
+      width: auto;
+    }
+  }
+</style>

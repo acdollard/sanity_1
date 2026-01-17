@@ -4,6 +4,7 @@ import Header from "../components/Header.vue";
 import Footer from "../components/Footer.astro";
 import Services from "../components/Services.astro";
 import SingleQuoteAstro from "../components/SingleQuote.astro";
+import PreviousClients from "../components/PreviousClients.astro";
 import ContactForm from "../components/ContactForm.astro";
 ---
 
@@ -38,7 +39,7 @@ import ContactForm from "../components/ContactForm.astro";
     </div>
     <div class="spacer wave-white-to-blue"></div>
     <div
-      class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt"
+      class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt py-4"
     >
       <Services />
     </div>
@@ -50,11 +51,17 @@ import ContactForm from "../components/ContactForm.astro";
     </div>
     <div class="spacer wave-white-to-blue"></div>
     <div
+      class="text-area text-2xl flex w-100 flex-col justify-center items-center font-jakarta bg-seasalt py-4"
+    >
+      <PreviousClients />
+    </div>
+    <div class="spacer wave-2"></div>
+    <div
       id="reach-out"
-      class="flex flex-col md:flex-row lg:max-w-screen-lg lg:mx-auto justify-evenly"
+      class="flex flex-col md:flex-row lg:max-w-screen-lg lg:mx-auto justify-evenly pt-24"
     >
       <div
-        class="text-area text-2xl flex flex-col justify-start items-center md:w-1/2 font-jakarta bg-seasalt"
+        class="text-area text-2xl flex flex-col justify-start items-center md:w-1/2 font-jakarta bg-seasalt py-4"
       >
         <p class="text-center text-lg md:text-2xl m-6">
           You have <strong>more important</strong> things to worry about than your
